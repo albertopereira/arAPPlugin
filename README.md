@@ -9,7 +9,7 @@ __Some features__
 * The "Popular this week" box gets a bigger highlight;
 * The first element of the "Popular this week" also shows its thumbnail (if it exists);
 
-![Overall Layout](http://albertopereira.com/images/atom_1.jpg){:width="50%"}
+<img src="http://albertopereira.com/images/atom_1.jpg" width="50%">
 
 
 
