@@ -1,0 +1,417 @@
+/*
+ * This file is part of the Access to Memory (AtoM) software.
+ *
+ * Access to Memory (AtoM) is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Access to Memory (AtoM) is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with Access to Memory (AtoM).  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+@font-face {
+  font-family: 'Open Sans Regular';
+  src: url('../vendor/fonts/open-sans/OpenSans-Regular-webfont.eot');
+  src: url('../vendor/fonts/open-sans/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../vendor/fonts/open-sans/OpenSans-Regular-webfont.woff') format('woff'),
+    url('../vendor/fonts/open-sans/OpenSans-Regular-webfont.ttf') format('truetype'),
+    url('../vendor/fonts/open-sans/OpenSans-Regular-webfont.svg#OpenSansRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans Semibold';
+  src: url('../vendor/fonts/open-sans/OpenSans-Semibold-webfont.eot');
+  src: url('../vendor/fonts/open-sans/OpenSans-Semibold-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../vendor/fonts/open-sans/OpenSans-Semibold-webfont.woff') format('woff'),
+    url('../vendor/fonts/open-sans/OpenSans-Semibold-webfont.ttf') format('truetype'),
+    url('../vendor/fonts/open-sans/OpenSans-Semibold-webfont.svg#OpenSansSemibold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*
+ * Load Twitter Bootstrap
+ * -----------------------------------------------------------------------------
+ * I can't just load their bootstrap.less and responsive.less files because
+ * there are some limitations: 1) less @variables can't be overriden, 2) for
+ * some reason responsive.less imports the vendor variables.less again
+ */
+@import "../../../vendor/bootstrap/less/reset.less";
+@import "less/variables.less";
+@import "less/loader-bootstrap.less";
+@import "less/loader-yui.less";
+
+// Include files
+@import "less/mixins.less";
+@import "less/scaffolding.less";
+@import "less/type.less";
+@import "less/pager.less";
+@import "less/search.less";
+@import "less/header.less";
+@import "less/treeview.less";
+@import "less/popovers.less";
+@import "less/description.less";
+@import "less/import.less";
+@import "less/forms.less";
+@import "less/buttons.less";
+@import "less/legacy.less";
+@import "less/jobs.less";
+@import "less/bootstrap-mod.less";
+@import "less/panels.less";
+
+// Print rules last
+@import "less/print.less";
+
+// TODO
+// Merge css/* (including classic)
+// Use html.js if possible
+// Review Caribou and Trillium code in case I forgot something
+//   - Like .throbbing
+
+a{
+  color: #fe6602;
+}
+
+body, html{
+  background-color: #fafafa;
+}
+
+#top-bar {
+  height: 600px;
+  background-color: #161514;
+  background-image: url(/plugins/arAPPlugin/images/background.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+#search-bar {
+  white-space: nowrap;
+  margin-left: 10px;
+}
+
+#search-form-wrapper{
+  position: absolute;
+  top: 60%;
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto; 
+  width: 40%;
+}
+
+#search-form-wrapper h2{
+  display: none;
+}
+
+#search-form-wrapper form{
+  margin:0px;
+}
+
+#search-form-wrapper input[name="query"]{
+  width: ~"calc(100% - 80px)";
+  display: inline-block;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  min-height: 40px;
+  margin: 0px;
+}
+
+#search-form-wrapper button{
+  width: 80px;
+  float: right;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  min-height: 40px;
+  background-color: #404040 !important;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  outline: none;
+}
+
+#search-form-wrapper button:hover{
+  background-color: #f6ac00 !important;
+}
+
+header nav{
+  // position: absolute;
+  // bottom: 0px;
+  // right: 10px;
+}
+
+header .background-gradient{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  // background-image: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.3));
+  background-color: rgba(0,0,0,0.3);
+}
+
+.search-popover {
+  top: 39px;
+}
+
+header #logo {
+  position: relative;
+  z-index:1;
+}
+
+#popular-this-week{
+  width: 60%;
+  margin: 10px auto;
+  max-width: 750px;
+  padding: 0px 20px 30px 20px;
+  border-radius: 5px;
+  // background-color: #d89700;
+  background-color: #262626;
+  margin-top: -100px;
+  position: relative;
+  display: table;
+  -webkit-box-shadow: 10px 10px 24px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 24px 0px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 24px 0px rgba(0,0,0,0.75);
+}
+
+#popular-this-week h2{
+  color: #eeeeee;
+  line-height: 30px;
+}
+
+#popular-this-week ul{
+  float: right;
+  list-style-type: none;
+  width: 50%;
+}
+
+#popular-this-week ul li:first-child{
+  position: absolute;
+  left: 20px;
+  width: 45%;
+  height: 75%;
+  max-height: 175px;
+}
+
+#popular-this-week ul li:first-child a{
+  position: absolute;
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+  left: 10px;
+  bottom: 10px;
+  color: #ffffff;
+}
+
+
+#popular-this-week ul li a{
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+
+#popular-this-week ul li a:hover{
+  // border-bottom: 1px dashed #eeeeee;
+  color: #888888;
+  transition: all 0.5s ease;
+}
+
+#popular-this-week .popular-image{
+  float: left;
+  height: 100%;
+  width: 100%;
+  border: 3px solid #eeeeee;
+}
+
+#popular-this-week .n-visits{
+  margin-left: 5px;
+}
+
+#popular-this-week ul li:first-child .n-visits{
+  display: block;
+  margin: 0px;
+  font-size: 1rem;
+}
+
+header #logo{
+  position: absolute;
+  top: 50px;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+#site-slogan {
+  background-color: rgba(22,21,20,0);
+  height: auto;
+  color: #fff;
+  width: 60%;
+  position: absolute;
+  top: 200px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  overflow: visible;
+  white-space: normal;
+}
+
+#site-slogan span{
+  line-height: normal;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+}
+
+#logo img{
+  height: 90px;
+}
+
+#wrapper {
+  background-image: none;
+  margin-top: 30px;
+}
+
+#content {
+   background-color: rgba(0,0,0,0); 
+   border: 0px solid #d9d9d9; 
+   -webkit-border-radius: 4px; 
+  -moz-border-radius: 0px;
+   border-radius: 0px; 
+   -webkit-box-shadow: 0 0px 0px rgba(0,0,0,0.2); 
+  -moz-box-shadow: 0 0px 0px rgba(0,0,0,0.2);
+   box-shadow: 0 0px 0px rgba(0,0,0,0.2); 
+}
+
+.search-result {
+  padding: 20px;
+  border-bottom: 1px solid #888888;
+}
+
+#addInformationObjectWrapper_c{
+  position: fixed !important;
+  top: 30px !important;
+  width: 90%;
+  max-width: 780px;
+}
+
+#addInformationObject .yui-ac-content{
+  overflow-y: scroll;
+  height: 200px;
+}
+
+#sidebar{
+  text-align: right;
+}
+
+#sidebar ul li{
+  list-style-type: none;
+}
+
+#sidebar .home-menu ul li a{
+  font-size: 1rem;
+}
+
+#sidebar .home-menu ul li{
+  line-height: 25px;
+}
+
+.facet{
+  border-bottom: 1px solid #cccccc;
+}
+
+.facet.open .facet-header a, .facet.open .facet-header a:hover, .facet .facet-header a, .facet .facet-header a:hover{
+  background-color: rgba(0,0,0,0);
+  color: #555555;
+}
+
+.facet.open {
+  margin-top: 0px; 
+  margin-bottom: 0px; 
+}
+
+.facet .facet-body {
+  background-color: rgba(0,0,0,0);
+}
+
+.facet.open .facet-header a:after,.facet .facet-header a:hover:after{
+  color: #555555;
+}
+
+.search-result .title, .search-result .title a{
+  color: #297fa9;
+}
+
+#treeview{
+  text-align: left;
+}
+
+#fullwidth-treeview-row{
+  position: fixed;
+  width: 80%;
+  left: 10%;
+  top: 10%;
+  height: 300px !important;
+  z-index: 200;
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 5px;
+  display: none;
+}
+
+.fullwidth-treeview-row-close{
+  position: absolute;
+  top: 5px;
+  right: 9px;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.navigate-tree-link{
+  display: block;
+  margin-top: 10px;
+  font-size: .9rem;
+}
+
+.blog li{
+  list-style-type: none;
+}
+
+.blog-title{
+  font-size: 2rem;
+  line-height: 4rem;
+
+}
+
+@media (min-width: 1200px){
+  .container, .navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
+    width: 1250px;
+  }
+  .span3 {
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 979px) {
+  #search-form-wrapper {
+      width: 90%;
+  }
+
+  #popular-this-week {
+    width: 90%;
+  }
+
+  #search-bar {
+    margin: 10px;
+    padding: 0px;
+    margin: -55px 95px;
+    padding: 0;
+    float: left;
+  }
+}
