@@ -19,3 +19,13 @@ __Some features__
 * You don't have to chose between the sidebar treeview and the full width treeview. You can have both. There's a new link, right below the sidebar treeview, that opens a popup with the full width treeview.
 
 <img src="http://albertopereira.com/images/atom_2.jpg" width="50%">
+
+## How to use
+
+To use this theme, copy the contents to a arAPPlugin folder in the plugins folder of the atom installation folder, run 
+
+```
+make -C plugins/arAPPlugin/
+```
+
+from the atom installation root folder, and select the new theme from the backoffice (see https://www.accesstomemory.org/pt/docs/2.4/user-manual/administer/themes/#themes for more information).
