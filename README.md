@@ -29,3 +29,6 @@ make -C plugins/arAPPlugin/
 ```
 
 from the atom installation root folder, and select the new theme from the backoffice (see https://www.accesstomemory.org/pt/docs/2.4/user-manual/administer/themes/#themes for more information).
+
+## Demo
+Yes. At http://ks23963.kimsufi.com/?sf_culture=en.
