@@ -10,15 +10,15 @@ __Some features__
 * The first element of the "Popular this week" also shows its thumbnail (if it exists);
 * Overall style changes (including new icons);
 
-<img src="http://albertopereira.com/images/atom_1.jpg" width="50%">
+<img src="http://139.162.214.160/images/atom_1.jpg" width="50%">
 
 * A Blog! (well, sort of), it uses static pages to mimic a blog. You just have to create a page called "Blog", and any other page that has a title that starts with "_X-", will automatically be listed in the blog page (e.g. "_X-A post title").
 
-<img src="http://albertopereira.com/images/atom_3.jpg" width="50%">
+<img src="http://139.162.214.160/images/atom_3.jpg" width="50%">
 
 * You don't have to chose between the sidebar treeview and the full width treeview. You can have both. There's a new link, right below the sidebar treeview, that opens a popup with the full width treeview.
 
-<img src="http://albertopereira.com/images/atom_2.jpg" width="50%">
+<img src="http://139.162.214.160/images/atom_2.jpg" width="50%">
 
 ## How to use
 
