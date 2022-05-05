@@ -18,7 +18,7 @@
         }
 
         if($first) {
-          $img = $object instanceof QubitInformationObject ? $object->digitalObjects[0] : null;
+          $img = $object instanceof QubitInformationObject ? $object->digitalObjectsRelatedByobjectId[0] : null;
         }
       ?>
       <?php if($isAllowed){ ?>

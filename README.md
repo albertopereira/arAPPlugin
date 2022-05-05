@@ -1,7 +1,7 @@
 # arAPPlugin
 __Theme for Atom (Access to Memory)__
 
-This theme is for version 2.5. Previous versions will probably not work.
+This theme is for version 2.6. Previous versions will not work.
 
 __Some features__
 
@@ -22,13 +22,17 @@ __Some features__
 
 ## How to use
 
-To use this theme, copy the contents to a arAPPlugin folder in the plugins folder of the atom installation folder, run 
+To use this theme: 
+
+* copy the contents to a arAPPlugin folder in the plugins folder of the atom installation folder;
+* run, from the atom installation root folder 
 
 ```
 make -C plugins/arAPPlugin/
 ```
+* replace the files `popular_default.jpg` and `background.jpg` in the images folder.
 
-from the atom installation root folder, and select the new theme from the backoffice (see https://www.accesstomemory.org/pt/docs/2.4/user-manual/administer/themes/#themes for more information).
+* select the new theme from the backoffice (see https://www.accesstomemory.org/pt/docs/2.6/user-manual/administer/themes/#themes for more information).
 
 ## Demo
-Yes. At http://ks23963.kimsufi.com/atom/?sf_culture=en.
+No.
